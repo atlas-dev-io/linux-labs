@@ -1,8 +1,9 @@
 #include <iostream>
+
 template <typename T>
 
-T add(T a, T b) {
-    std::cout << "The template function was called." << std::endl;
+T add(T a, int b) {
+    std::cout << "The template function was called(add)." << std::endl;
     return a + b;
 }
 
@@ -14,5 +15,8 @@ int main() {
 
     std::cout << add(n1, n2) << std::endl;
     std::cout << add(n3, n4) << std::endl;
+    std::cout << add(n1, n3) << std::endl;
+    std::cout << add(n3, n1) << std::endl;
+
     return 0;
 }
